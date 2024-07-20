@@ -1,0 +1,10 @@
+h1.Title {
+    font-family: 'Kosugi', monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'NeueMontreal';
+    src: local('NeueMontreal'), url(../../public/assets/NeueMontreal.otf) format('opentype');
+  }

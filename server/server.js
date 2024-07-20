@@ -15,8 +15,8 @@
 
 // validator runs some basic checks to make sure you've set everything up correctly
 // this is a tool provided by staff, so you don't need to worry about it
-const validator = require("./validator");
-validator.checkSetup();
+// const validator = require("./validator");
+// validator.checkSetup();
 
 //allow us to use process.ENV
 require("dotenv").config();
@@ -25,53 +25,53 @@ require("dotenv").config();
 const http = require("http");
 const express = require("express"); // backend framework for our node server.
 const session = require("express-session"); // library that stores info about each connected user
-const mongoose = require("mongoose"); // library to connect to MongoDB
+// const mongoose = require("mongoose"); // library to connect to MongoDB
 const path = require("path"); // provide utilities for working with file and directory paths
 
 const api = require("./api");
-const auth = require("./auth");
+// const auth = require("./auth");
 
 // socket stuff
-const socketManager = require("./server-socket");
+// const socketManager = require("./server-socket");
 
 // Server configuration below
 // TODO change connection URL after setting up your team database
-const mongoConnectionURL = process.env.MONGO_SRV;
+// const mongoConnectionURL = process.env.MONGO_SRV;
 // TODO change database name to the name you chose
-const databaseName = "FILL_ME_IN";
+// const databaseName = "FILL_ME_IN";
 
 // mongoose 7 warning
-mongoose.set("strictQuery", false);
+// mongoose.set("strictQuery", false);
 
 // connect to mongodb
-mongoose
-  .connect(mongoConnectionURL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    dbName: databaseName,
-  })
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.log(`Error connecting to MongoDB: ${err}`));
+// mongoose
+//   .connect(mongoConnectionURL, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     dbName: databaseName,
+//   })
+//   .then(() => console.log("Connected to MongoDB"))
+//   .catch((err) => console.log(`Error connecting to MongoDB: ${err}`));
 
 // create a new express server
 const app = express();
-app.use(validator.checkRoutes);
+// app.use(validator.checkRoutes);
 
 // allow us to process POST requests
 app.use(express.json());
 
 // set up a session, which will persist login data across requests
-app.use(
-  session({
-    // TODO: add a SESSION_SECRET string in your .env file, and replace the secret with process.env.SESSION_SECRET
-    secret: "session-secret",
-    resave: false,
-    saveUninitialized: false,
-  })
-);
+// app.use(
+//   session({
+//     // TODO: add a SESSION_SECRET string in your .env file, and replace the secret with process.env.SESSION_SECRET
+//     secret: "session-secret",
+//     resave: false,
+//     saveUninitialized: false,
+//   })
+// );
 
 // this checks if the user is logged in, and populates "req.user"
-app.use(auth.populateCurrentUser);
+// app.use(auth.populateCurrentUser);
 
 // connect user-defined routes
 app.use("/api", api);
@@ -104,7 +104,7 @@ app.use((err, req, res, next) => {
 // hardcode port to 3000 for now
 const port = 3000;
 const server = http.Server(app);
-socketManager.init(server);
+// socketManager.init(server);
 
 server.listen(port, () => {
   console.log(`Server running on port: ${port}`);
