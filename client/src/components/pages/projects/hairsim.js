@@ -1,0 +1,20 @@
+import React from "react";
+
+import "../../../utilities.css";
+import "./projpage.css";
+
+const HairSim = () => {
+    return (<>
+        <div className="projBody">
+        <h1 className="projTitle">HairSim</h1>
+        <h2 className="projSubtitle">Nov 2023</h2>
+        Hair simulation is a point of interest in computer graphics largely because of how frequently it appears in different media like movies and video games. It is an integral part of character design, both for humans and other non-human creatures like animals and monsters, and is often used to express different personality traits or moods in a character. However, it is also challenging to simulate because of the large quantities of hair on a human head or the body of an animal. In this project, I aimed to recreate some of the essential physical behaviors of hair: inextensibility, hair-hair repulsion, and friction.
+        <br/>
+        I chose a particle-based approach to simulating hair. Each strand of hair is represented by a string of particles, where the first particle of every strand is at a fixed position. This particle-based approach is based on Müller, Kim, and Chentanez’s approach to imitating the inextensibility of hair[2] . This is in contrast to some other approaches to rendering hair that involve mass-spring systems, which allow for the length-wise stretching of hair. These approaches may be better suited for curly hair, where there is a little more room for extensibility. However, in straight hair, there is typically little extensibility or strech along the length of the hair, as the hair strand itself is very inelastic. Therefore, to imitate this property of hair, the individual particles that make up the hair must always maintain a constant distance between them. Then, even as the positions and velocities of the particles change, the distance between them is preserved and therefore the entire length of the hair strand remains constant throughout the simulation. Much of hair dynamics is also highly dependent on numerous small-scale interactions between individual hairs, which collectively create movement on a larger scale. Collisions between hair strands create friction, and static electricity forces can cause hairs to stick together in clusters or repulse each other to create frizz; a combination of many strands can also create a larger volume of hair from the volume of strands. However, simulating each of these behaviors on such an individual scale is extremely expensive – a human head can contain hundreds of thousands of strands, and coats of animals can contain millions.
+        <br/>
+        Therefore, this behavior must be approximated using alternative strategies. To simulate hair-hair repulsion and friction, I borrowed ideas from Petrovic, Henne, and Anderson’s exploration of volumetric based hair rendering[1] . In their paper, they group hair particles based on position into a voxel grid. From this grid, particles are velocity smoothed and hair is directed into a target shape by calculating the gradient between a target voxel grid and a current voxel grid. Approach Dynamic FTL The structure of the simulation is similar to the cloth and pendulum simulation from the assignment 3, where objects are constructed from a series of particles that update with each timestep. The main difference in structure is that instead of an integrator, I used a position-based dynamics approach. In this approach, the positions and velocities of each particle is updated based on the following equations from simple kinematics, where pi represents the new position and xi represents the position of the particle at the previous timestep: pi ← xi + ∆tvi + ∆t 2 fi mi (1) vi ← pi − xi ∆t (2) pi ← xi (3) This set of equations can be modified to handle the distance constraints between particles by modifying
+        </div>
+        </>);
+}
+
+export default HairSim;

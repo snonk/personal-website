@@ -1,0 +1,12 @@
+.projTitle {
+    color: var(--sea-blue);
+}
+
+.projSubtitle {
+    color: var(--sea-green);
+}
+
+.projBody {
+    margin: 7% 10%;
+    color: var(--body-text);
+}

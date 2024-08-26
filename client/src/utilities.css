@@ -1,29 +1,12 @@
-/**
-* Welcome to your ✨𝔲𝔱𝔦𝔩𝔦𝔱𝔶 𝔰𝔱𝔶𝔩𝔢𝔰✨!
-* This file includes utility classes that are super simple
-* and can be used to add general styles; variable definitions
-* for colors; and styles to html, body, and other high level
-* DOMs.
-* 
-* All utility classes start with a `u-` and all do
-* one basic CSS thing (for example, making the font-weight
-* 600 for bolding) or are super generic.
-* 
-* This is 𝙉𝙊𝙏 the place to define classes for components or
-* do rigorous styling. You shoud not need to change this file
-* much after initial creation.
-*/
-
-/* TODO: REPLACE WITH YOUR OWN FONT! */
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-
 :root {
-  --primary: #396dff;
-  --primary--dim: #6987db;
-  --darkgrey: #d4d4d4;
-  --medgrey: #e0e0e0;
-  --grey: #f7f7f7;
-  --white: #fff;
+  --background: #FCF9F2;
+  --background-transparent: #FCF9F200;
+  --sea-green: #8BB295;
+  --lavender: #9EA0C0;
+  --sea-blue: #7C9AA2;
+  --pink: #D77DA5;
+  --body-text: #5a5579;
+  
 
   --xs: 4px;
   --s: 8px;
@@ -31,11 +14,21 @@
   --l: 24px;
 }
 
+html {
+  z-index: 1;
+}
+
+h1, h2 {
+  font-weight: 100;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  /* margin: 0;
+  padding: 0; */
+  font-family: 'mplus', monospace;
+  background-color: var(--background);
+  /* font-family: "Roboto", sans-serif; */
+  /* font-weight: 300; */
 }
 
 form {

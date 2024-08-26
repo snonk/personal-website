@@ -1,11 +1,13 @@
 [
     {
-        "name": "hairsim",
+        "id": "hairsim",
+        "title": "hairsim",
         "date": "december 2023",
         "summary": "hair lol"
     },
     {
-        "name": "projset",
+        "id": "projset",
+        "title": "projset",
         "date": "jan 2024",
         "summary": "projset lol"
     }

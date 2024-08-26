@@ -18,8 +18,12 @@ const router = express.Router();
 
 router.get("/projects", (_req, res) => {
   const projects = JSON.parse(fs.readFileSync('./server/projects.json'));
-  console.log(projects);
-  res.send(projects);
+  res.status(200).send(projects);
+});
+
+router.get("/gallery", (req, res) => {
+  const files = fs.readdirSync('./client/dist/art/' + req.query.path);
+  res.status(200).send(files.map((file) => '/art/' + req.query.path + file));
 });
 
 router.all("*", (req, res) => {

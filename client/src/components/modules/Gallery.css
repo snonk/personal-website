@@ -1,0 +1,9 @@
+.galleryContainer {
+    columns: 20rem 2;
+    gap: 1.4rem;
+}
+
+.galleryContainer img {
+    width: 100%;
+    margin-bottom: 1.4rem;
+}
