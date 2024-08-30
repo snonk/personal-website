@@ -2,10 +2,11 @@
   --background: #FCF9F2;
   --background-transparent: #FCF9F200;
   --sea-green: #8BB295;
-  --lavender: #9EA0C0;
+  --lavender: #898cb4;
   --sea-blue: #7C9AA2;
   --pink: #D77DA5;
   --body-text: #5a5579;
+  --faded-text: #a19eb0;
   
 
   --xs: 4px;
@@ -18,7 +19,7 @@ html {
   z-index: 1;
 }
 
-h1, h2 {
+* {
   font-weight: 100;
 }
 

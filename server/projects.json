@@ -2,13 +2,13 @@
     {
         "id": "hairsim",
         "title": "hairsim",
-        "date": "december 2023",
-        "summary": "hair lol"
+        "date": "dec 2023",
+        "summary": "A particle-based approach to hair rendering in C++."
     },
     {
         "id": "projset",
         "title": "projset",
         "date": "jan 2024",
-        "summary": "projset lol"
+        "summary": "A real-time multiplayer card game that tests your ability to convert to binary."
     }
 ]

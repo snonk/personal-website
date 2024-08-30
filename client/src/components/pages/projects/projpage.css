@@ -1,12 +1,41 @@
 .projTitle {
     color: var(--sea-blue);
+    font-size: 30pt;
 }
 
 .projSubtitle {
     color: var(--sea-green);
+    font-size: 20pt;
 }
 
 .projBody {
-    margin: 7% 10%;
+    margin: 10% 20%;
+}
+
+.projBody p {
     color: var(--body-text);
+    font-size: 14pt;
+    font-family: Graphik;
+    line-height: 150%;
+}
+
+.projBody img {
+    width: 100%;
+    mix-blend-mode: multiply;
+}
+
+.smallPhoto {
+    width: 350px;
+}
+
+.captionedPhoto {
+    margin: 5% auto;
+    display: block;
+    text-align: center;
+}
+
+.captionedPhoto p {
+    font-size: 12pt;
+    font-style: italic;
+    color: var(--faded-text);
 }

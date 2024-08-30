@@ -10,7 +10,7 @@ const Project = ({ id, title, date, summary }) => {
   return (
     // <div className="projPreview" onClick={() => navigate('../pages/projects/' + id + ".js") }>
     <Link className="projPreview" to={'/projects/' + id } style={{textDecoration: "none", color: "transparent"}}>
-        <img src={"projects/" + title + ".png"} alt=""/>
+        <img src={"/projects/" + id + ".png"} alt=""/>
         <h1>{title}</h1>
         <h2>{date}</h2>
         <p>{summary}</p>

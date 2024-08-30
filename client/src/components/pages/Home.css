@@ -3,6 +3,11 @@ html {
   overflow-x: hidden;
 }
 
+a {
+  font-weight: 900;
+  color: var(--pink);
+}
+
 p {
   color: var(--lavender);
 }
@@ -88,7 +93,14 @@ div.about {
   font-family: 'mplus';
   src: local('mplus'), url(../../../dist/assets/mplus.ttf) format('opentype');
 }
-
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face {
+  font-family: 'Graphik';
+  src: url('https://d3e54v103j8qbb.cloudfront.net/fonts/Graphik-Regular-Web.5e78809d4d.eot') format('embedded-opentype'), url('https://d3e54v103j8qbb.cloudfront.net/fonts/Graphik-Regular-Web.9806bc37bf.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 @keyframes imagechange {
   0% {
     opacity:1;

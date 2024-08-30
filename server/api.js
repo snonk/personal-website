@@ -23,6 +23,7 @@ router.get("/projects", (_req, res) => {
 
 router.get("/gallery", (req, res) => {
   const files = fs.readdirSync('./client/dist/art/' + req.query.path);
+  files.sort();
   res.status(200).send(files.map((file) => '/art/' + req.query.path + file));
 });
 
