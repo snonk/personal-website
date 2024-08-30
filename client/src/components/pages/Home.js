@@ -8,10 +8,22 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-
+  
+  const primaryPhrases = [
+    'a computer science student',
+    'an artist',
+    'a music enjoyer',
+    'a bird fan'
+  ]
+  const secondaryPhrases = [
+    'focus in systems and security',
+    'love for color',
+    'soft spot for operas',
+    'particular love for pigeons'
+  ]
   const [projects, setProjects] = useState([]);
-  const [primaryText, setPrimaryText] = useState("computer science student");
-  const [secondaryText, setSecondaryText] = useState("focus in systems and security");
+  const [primaryText, setPrimaryText] = useState(primaryPhrases[0]);
+  const [secondaryText, setSecondaryText] = useState(secondaryPhrases[0]);
 
   useEffect(() => {
     get("/api/projects").then((projects) => {
@@ -83,18 +95,6 @@ const Home = () => {
   // Example
   // ——————————————————————————————————————————————————
 
-  const primaryPhrases = [
-    'computer science student',
-    'artist',
-    'music enjoyer',
-    'bird fan'
-  ]
-  const secondaryPhrases = [
-    'focus in systems and security',
-    'love for color',
-    'something',
-    'particular love for pigeons'
-  ]
   
   const updatePrimary = (text) => {
     setPrimaryText(text);
@@ -127,7 +127,7 @@ const Home = () => {
       <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet" />
       <div className="homeHeader">
         <div>
-          <h1 className="Title" id="title">i’m selena, a <span className="primaryDesc">{primaryText}</span> with a <span className="secondaryDesc">{secondaryText}</span>.</h1>
+          <h1 className="Title" id="title">i’m selena, <span className="primaryDesc">{primaryText}</span> with a <span className="secondaryDesc">{secondaryText}</span>.</h1>
         </div>
         <p className="Subtitle">
           currently a security engineer intern @ amazon
@@ -145,8 +145,22 @@ const Home = () => {
         <img className="stars2" src="assets/stars2.png"/>
         <div className="about">
           <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          hi! i'm selena, currently an undergraduate at MIT studying computer science. i love anything systems or security or graphics, but i also do some drawing in my free time so this website is a space for me to dump it all!
+          <br/>
+          <br/>
           </p>
+          <div style={{textAlign: "left"}}>
+          <p>
+          stuff i like today:
+            <ul>
+              <li><a href="https://www.blastradius.fail/attack-details">this attack</a> on an old network protocol i read about and never thought i'd see again</li>
+              <li>emma harner's <a href="https://open.spotify.com/artist/22LN4kmzdiXhbuFUU4GWCQ">music</a></li>
+              <li>cardamom and orange blossom</li>
+            </ul>
+
+          </p>
+
+          </div>
         </div>
       </div>
 
