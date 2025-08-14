@@ -10,5 +10,11 @@
         "title": "projset",
         "date": "jan 2024",
         "summary": "A real-time multiplayer card game that tests your ability to convert to binary."
+    },
+    {
+        "id": "flapgap",
+        "title": "flap through the gap",
+        "date": "fall 2024",
+        "summary": "An FPGA-based video game with a custom graphics engine."
     }
 ]

@@ -6,6 +6,7 @@ import NavBar from "./modules/NavBar.js";
 import Footer from "./modules/Footer.js";
 
 import ProjSet from "./pages/projects/projset.js";
+import FlapGap from "./pages/projects/flapgap.js";
 import HairSim from "./pages/projects/hairsim.js";
 import Technical from "./pages/art/technical.js";
 import Figure from "./pages/art/figure.js";
@@ -24,10 +25,24 @@ import Grimm from "./pages/projects/grimm.js";
 import Angel from "./pages/projects/angel.js";
 import Alice from "./pages/projects/alice.js";
 
-/**
- * Define the "App" component
- */
 
+import { useLocation } from "react-router";
+
+const ScrollToTop = ({ children }) => {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [pathname]);
+
+  return children;
+};
 
 const App = () => {
   const [projects, setProjects] = useState([]);
@@ -56,6 +71,7 @@ const App = () => {
   return (
     <MathJaxContext config={config}>
       <NavBar/>
+      {/* <ScrollToTop> */}
       <Routes>
         <Route
           path="/"
@@ -67,6 +83,7 @@ const App = () => {
         />
         <Route path="/projects/projset" element={<ProjSet/>}/>
         <Route path="/projects/hairsim" element={<HairSim/>}/>
+        <Route path="/projects/flapgap" element={<FlapGap/>}/>
         <Route path="/projects/drywalle" element={<DrywallE/>}/>
         <Route path="/projects/wig" element={<Wig/>}/>
         <Route path="/projects/runes" element={<Runes/>}/>
@@ -80,6 +97,7 @@ const App = () => {
         <Route path="/art/game" element={<Game/>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
+      {/* </ScrollToTop> */}
       <Footer/>
     </MathJaxContext>
   );

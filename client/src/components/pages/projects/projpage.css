@@ -24,6 +24,12 @@
     mix-blend-mode: multiply;
 }
 
+.projBody h3 {
+    padding-top: 30pt;
+    font-size: 20pt;
+    color: var(--pink);
+}
+
 .smallPhoto {
     width: 350px;
 }
@@ -38,4 +44,8 @@
     font-size: 12pt;
     font-style: italic;
     color: var(--faded-text);
+}
+
+li + li {
+    padding-top: 10pt;
 }

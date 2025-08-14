@@ -7,7 +7,11 @@ import "../../utilities.css";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
+import { useLocation } from "react-router-dom";
+
 const Home = () => {
+  // const { hash } = useLocation();
+  // console.log("hash", has
   
   const primaryPhrases = [
     'a computer science student',
@@ -130,7 +134,7 @@ const Home = () => {
           <h1 className="Title" id="title">i’m selena, <span className="primaryDesc">{primaryText}</span> with a <span className="secondaryDesc">{secondaryText}</span>.</h1>
         </div>
         <p className="Subtitle">
-          currently a security engineer intern @ amazon
+          currently a software engineer intern @ datadog
         </p>
         <img className="stars1" src="assets/stars.png"/>
         <img className="stars1" src="assets/stars2.png"/>
@@ -145,7 +149,7 @@ const Home = () => {
         <img className="stars2" src="assets/stars2.png"/>
         <div className="about">
           <p>
-          hi! i'm selena, currently an undergraduate at MIT studying computer science. i love anything systems or security or graphics, but i also do some drawing in my free time so this website is a space for me to dump it all!
+          hi! i'm selena, currently an undergrad/MEng at MIT studying computer science. i love anything computer systems related, but i also do some drawing in my free time so this website is a space for me to dump it all!
           <br/>
           <br/>
           </p>
@@ -153,9 +157,10 @@ const Home = () => {
           <p>
           stuff i like today:
             <ul>
-              <li><a href="https://www.blastradius.fail/attack-details">this attack</a> on an old network protocol i read about and never thought i'd see again</li>
-              <li>emma harner's <a href="https://open.spotify.com/artist/22LN4kmzdiXhbuFUU4GWCQ">music</a></li>
-              <li>cardamom and orange blossom</li>
+              <li>rust's into()</li>
+              <li>billie marten's <a href="https://open.spotify.com/artist/02YLJJnWC7YQVixkjEBRn7">music</a></li>
+              <li>english bull terriers</li>
+              <li>mul-naengmyeon</li>
             </ul>
 
           </p>

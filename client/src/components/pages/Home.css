@@ -10,6 +10,7 @@ a {
 
 p {
   color: var(--lavender);
+  font-size:18px;
 }
 
 h1.Title {
