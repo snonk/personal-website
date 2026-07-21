@@ -1,5 +1,5 @@
 {
-  "name": "weblab-skeleton",
+  "name": "personal-website",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -17,7 +17,7 @@
   "license": "ISC",
   "homepage": "",
   "engines": {
-    "node": ">=18.x"
+    "node": "22.x"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
