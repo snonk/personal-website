@@ -1,0 +1,62 @@
+.projset-root .NavBar-container {
+  padding: var(--s) var(--l) var(--s);
+  background-color: var(--white);
+  box-shadow: var(--medgrey) 0px 2px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projset-root .NavBar-container img {
+  margin-top: -5px;
+  margin-right: 5px;
+}
+
+.projset-root #NavBar-title {
+  color: black;
+  font-weight: 800;
+  /* color: var(--red); */
+  /* font-size: 20px; */
+  /* height:100%; */
+}
+
+.projset-root #NavBar-title:hover {
+  color: var(--red);
+}
+
+.projset-root .NavBar-linkContainer {
+  margin-left: 1em;
+  padding-top: 1em;
+  align-items: center;
+  width: 25%;
+}
+
+.projset-root .NavBar-link,
+.projset-root .NavBar-link:visited {
+  color: var(--darkgrey);
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+
+.projset-root .NavBar-link:hover {
+  opacity: 1;
+}
+
+.projset-root .NavBar-link.NavBar-login {
+  opacity: 1;
+}
+
+.projset-root .NavBar-link+.NavBar-link {
+  margin-left: 2em;
+}
+
+.projset-root #profile {
+  cursor: pointer;
+}
+
+.projset-root #profile-container {
+  /* display:inline-block; */
+  /* position:absolute; */
+  float: right;
+}

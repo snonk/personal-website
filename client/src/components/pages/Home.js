@@ -12,9 +12,9 @@ import { useLocation } from "react-router-dom";
 const Home = () => {
   // const { hash } = useLocation();
   // console.log("hash", has
-  
+
   const primaryPhrases = [
-    'a computer science student',
+    'a software engineer',
     'an artist',
     'a music enjoyer',
     'a bird fan'
@@ -39,7 +39,7 @@ const Home = () => {
   // TextScramble
   // ——————————————————————————————————————————————————
 
-  Number.prototype.mod = function(n) {
+  Number.prototype.mod = function (n) {
     return ((this % n) + n) % n;
   }
   class TextScramble {
@@ -99,7 +99,7 @@ const Home = () => {
   // Example
   // ——————————————————————————————————————————————————
 
-  
+
   const updatePrimary = (text) => {
     setPrimaryText(text);
   }
@@ -115,17 +115,16 @@ const Home = () => {
     let counter = 0;
     const next = () => {
       Promise.all([primaryFx.updateText(primaryPhrases[(counter + primaryPhrases.length - 1) % primaryPhrases.length], primaryPhrases[counter]),
-        secondaryFx.updateText(secondaryPhrases[(counter + primaryPhrases.length - 1) % secondaryPhrases.length], secondaryPhrases[counter])]).then(()=>{
-          setTimeout(next, 1300);
-        });
+      secondaryFx.updateText(secondaryPhrases[(counter + primaryPhrases.length - 1) % secondaryPhrases.length], secondaryPhrases[counter])]).then(() => {
+        setTimeout(next, 1300);
+      });
       counter = (counter + 1) % primaryPhrases.length;
     }
     next();
   }, [])
 
-
   return (
-    <div className="home" style={{height: "100%"}}>
+    <div className="home" style={{ height: "100%" }}>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet" />
@@ -134,36 +133,36 @@ const Home = () => {
           <h1 className="Title" id="title">i’m selena, <span className="primaryDesc">{primaryText}</span> with a <span className="secondaryDesc">{secondaryText}</span>.</h1>
         </div>
         <p className="Subtitle">
-          currently a software engineer intern @ datadog
+          currently a software engineer @ datadog
         </p>
-        <img className="stars1" src="assets/stars.png"/>
-        <img className="stars1" src="assets/stars2.png"/>
-        <img className="plant" src="assets/plant.png"/>
-        <img className="plant" src="assets/plant2.png"/>
+        <img className="stars1" src="assets/stars.png" />
+        <img className="stars1" src="assets/stars2.png" />
+        <img className="plant" src="assets/plant.png" />
+        <img className="plant" src="assets/plant2.png" />
       </div>
 
       <h1 className="sectionTitle" id="about">about me</h1>
       <div className="aboutContainer">
-        <img src="assets/me.png" className="about"/>
-        <img className="stars2" src="assets/stars.png"/>
-        <img className="stars2" src="assets/stars2.png"/>
+        <img src="assets/me.png" className="about" />
+        <img className="stars2" src="assets/stars.png" />
+        <img className="stars2" src="assets/stars2.png" />
         <div className="about">
           <p>
-          hi! i'm selena, currently an undergrad/MEng at MIT studying computer science. i love anything computer systems related, but i also do some drawing in my free time so this website is a space for me to dump it all!
-          <br/>
-          <br/>
+            hi! i'm selena! i recently graduated with an MEng in computer science from MIT. i love anything computer systems related, but i also do some drawing in my free time so this website is a space for me to dump it all!
+            <br />
+            <br />
           </p>
-          <div style={{textAlign: "left"}}>
-          <p>
-          stuff i like today:
-            <ul>
-              <li>rust's into()</li>
-              <li>billie marten's <a href="https://open.spotify.com/artist/02YLJJnWC7YQVixkjEBRn7">music</a></li>
-              <li>english bull terriers</li>
-              <li>mul-naengmyeon</li>
-            </ul>
+          <div style={{ textAlign: "left" }}>
+            <p>
+              stuff i like today:
+              <ul>
+                <li>rust's into()</li>
+                <li>billie marten's <a href="https://open.spotify.com/artist/02YLJJnWC7YQVixkjEBRn7">music</a></li>
+                <li>english bull terriers</li>
+                <li>mul-naengmyeon</li>
+              </ul>
 
-          </p>
+            </p>
 
           </div>
         </div>
@@ -182,48 +181,48 @@ const Home = () => {
           backgroundImage: "url(assets/technical.png)",
           backgroundRepeat: "no-repeat",
           backgroundSize: "350px"
-          }}>
-        <Link to="/art/Technical">
-          <img src="assets/technical.png"/>
-        </Link>
+        }}>
+          <Link to="/art/Technical">
+            <img src="assets/technical.png" />
+          </Link>
         </div>
-        
+
         <div id="artProjects" className="artCategory" style={{
           backgroundImage: "url(assets/projects.png)",
           backgroundRepeat: "no-repeat",
           backgroundSize: "350px"
-          }}>
-        <Link to="/art/Project">
-          <img src="assets/projects.png"/>
-        </Link>
+        }}>
+          <Link to="/art/Project">
+            <img src="assets/projects.png" />
+          </Link>
         </div>
-        
+
         <div id="game" className="artCategory" style={{
           backgroundImage: "url(assets/game.png)",
           backgroundRepeat: "no-repeat",
           backgroundSize: "350px"
-          }}>
+        }}>
           <Link to="/art/Game">
-          <img src="assets/game.png"/>
+            <img src="assets/game.png" />
           </Link>
         </div>
-        
+
         <div id="figure" className="artCategory" style={{
           backgroundImage: "url(assets/figure.png)",
           backgroundRepeat: "no-repeat",
           backgroundSize: "350px"
-          }}>
+        }}>
           <Link to="/art/Figure">
-        <img src="assets/figure.png"/>
+            <img src="assets/figure.png" />
           </Link>
         </div>
-        
+
 
       </div>
 
       <h1 className="sectionTitle" id="contact">contact me</h1>
       <div className="contactContainer">
-          <p> email: scq at mit dot edu</p>
+        <p> email: scq at mit dot edu</p>
       </div>
 
 

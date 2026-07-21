@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { Link } from 'react-router-dom';
 
 import "./Project.css";
@@ -9,11 +10,11 @@ const Project = ({ id, title, date, summary }) => {
 
   return (
     // <div className="projPreview" onClick={() => navigate('../pages/projects/' + id + ".js") }>
-    <Link className="projPreview" to={'/projects/' + id } style={{textDecoration: "none", color: "transparent"}}>
-        <img src={"/projects/" + id + ".png"} alt=""/>
-        <h1>{title}</h1>
-        <h2>{date}</h2>
-        <p>{summary}</p>
+    <Link className="projPreview" to={'/projects/' + id} style={{ textDecoration: "none", color: "transparent" }}>
+      <img src={"/projects/" + id + ".png"} alt="" />
+      <h1>{title}</h1>
+      <h2>{date}</h2>
+      <p>{summary}</p>
     </Link>
   );
 };

@@ -1,0 +1,8 @@
+.projset-root {
+    background-color: var(--palegrey);
+}
+
+.projset-root {
+    min-height: 100vh;
+    width: 100%;
+}

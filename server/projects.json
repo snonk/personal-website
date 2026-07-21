@@ -1,5 +1,11 @@
 [
     {
+        "id": "meng",
+        "title": "meng thesis",
+        "date": "2025-26",
+        "summary": "Automatic detection and compilation of structured tensors"
+    },
+    {
         "id": "hairsim",
         "title": "hairsim",
         "date": "dec 2023",
