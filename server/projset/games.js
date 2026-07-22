@@ -154,7 +154,7 @@ const updateGame = (set, uid) => {
       game.deck = game.deck.slice(1);
     }
     if (game.deck.length === 0) {
-      break;
+      game.board.splice(i, 1);
     }
   }
   let scoresElosByName = getScoresElosByName(game);
@@ -165,7 +165,7 @@ const updateGame = (set, uid) => {
   User.findById(uid).then((user) => User.updateOne({ _id: uid }, { sets: user.sets + 1 }));
 
   // GAME END
-  if (game.deck.length === 0) {
+  if (game.board.length < 7 || (game.deck.length == 0 && checkSet(game.board))) {
     const winner = Object.keys(game.scores).reduce((p1, p2) =>
       game.scores[p1] > game.scores[p2] ? p1 : p2
     );
@@ -173,6 +173,7 @@ const updateGame = (set, uid) => {
     updateStats(game, winner).then(() => {
       for (const uid of game.players) {
         socketManager.getSocketFromUserID(uid).emit("endgame", game.names[winner]);
+        removeUser(uid);
       }
     });
   }
