@@ -46,11 +46,11 @@ app.use(
 // populate req.user
 app.use(auth.populateCurrentUser);
 
-// portfolio API
-app.use("/api", api);
-
 // projset API
 app.use("/projset/api", projsetApi);
+
+// portfolio API
+app.use("/api", api);
 
 // React build
 const reactPath = path.resolve(__dirname, "..", "client", "dist");

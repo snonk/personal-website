@@ -101,8 +101,8 @@ router.post("/stats", auth.ensureLoggedIn, (req, res) => {
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
-  console.log(`API route not found: ${req.method} ${req.url}`);
-  res.status(404).send({ msg: "API route not found" });
+  console.log(`PROJSET API route not found: ${req.method} ${req.url}`);
+  res.status(404).send({ msg: "PROJSET API route not found" });
 });
 
 module.exports = router;
